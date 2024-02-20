@@ -1,0 +1,38 @@
+@import "../utilis/variable.scss";
+.title-img {
+  display: grid;
+  div {
+    width: 335px;
+    height: 111px;
+    display: grid;
+    grid-column: 1;
+    grid-row: 1/1;
+    background: $black;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    border-radius: 10px;
+
+    img {
+      width: 335px;
+      height: 111px;
+      object-fit: cover;
+      display: grid;
+      grid-column: 1;
+      grid-row: 1/1;
+      opacity: 60%;
+      border-radius: 10px;
+    }
+  }
+
+  h1 {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1/-1;
+    width: 225px;
+    color: $white;
+    z-index: 1;
+  }
+}
+
+.square-loc {
+  height: 805;
+}

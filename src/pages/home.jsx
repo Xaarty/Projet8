@@ -1,5 +1,6 @@
 import "../styles/main.scss";
+import Title from "../components/homepagetitle";
 
 export default function Home() {
-  return <div>Home</div>;
+  return <Title />;
 }

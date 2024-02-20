@@ -2,3 +2,7 @@
 @import "./utilis/variable.scss";
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
+
+main {
+  display: grid;
+}
