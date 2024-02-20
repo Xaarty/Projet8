@@ -1,0 +1,27 @@
+@import "../utilis/variable.scss";
+
+footer {
+  background: $black;
+  color: $white;
+  padding: 66px 126.5px 58px 126.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 16px;
+    img {
+      width: 122px;
+      height: 39.44px;
+    }
+    p {
+      font-size: 12px;
+      width: 133.59px;
+    }
+  }
+}

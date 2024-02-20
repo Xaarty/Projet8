@@ -1,0 +1,46 @@
+@import "../utilis/variable.scss";
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: $font_weight_bold;
+  line-height: normal;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: $font_weight_bold;
+  line-height: normal;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: $font_weight_medium;
+  line-height: normal;
+}
+
+p {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: $font_weight_medium;
+  line-height: normal;
+}
