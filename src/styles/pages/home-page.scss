@@ -1,8 +1,16 @@
 @import "../utilis/variable.scss";
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  gap: 22px;
+  margin-bottom: 27px;
+}
 .title-img {
   display: grid;
+  align-items: center;
   div {
-    width: 335px;
     height: 111px;
     display: grid;
     grid-column: 1;
@@ -12,9 +20,9 @@
     border-radius: 10px;
 
     img {
-      width: 335px;
       height: 111px;
       object-fit: cover;
+      width: 100%;
       display: grid;
       grid-column: 1;
       grid-row: 1/1;
@@ -27,12 +35,32 @@
     display: grid;
     grid-column: 1;
     grid-row: 1/-1;
+    margin-left: 16px;
     width: 225px;
     color: $white;
     z-index: 1;
   }
 }
 
-.square-loc {
-  height: 805;
+.square-locs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.square {
+  height: 255px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 96, 96, 1) 0%,
+    rgba(218, 62, 62, 1) 50%
+  );
+  border-radius: 10px;
+  display: flex;
+  align-items: end;
+  h2 {
+    margin: 0 0 15px 19.71px;
+    font-size: 18px;
+    color: $white;
+  }
 }
