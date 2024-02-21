@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/home";
 import Layout from "./pages/layout";
 import Error from "./pages/error-page";
-import Propos from "./pages/a-propos";
+import Propos from "./pages/apropos";
 import FicheLogement from "./pages/fiche-logement";
 
 const router = createBrowserRouter([
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/a-propos",
+        path: "/apropos",
         element: <Propos />,
       },
       {
