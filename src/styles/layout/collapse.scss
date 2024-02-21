@@ -1,6 +1,39 @@
 @import "../utilis/variable.scss";
 .collapse_box {
   width: 100%;
-  height: 30px;
-  background: $main-color;
+
+  border-radius: 5px;
+
+  &_bar {
+    background: $main-color;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 10px;
+
+    h2 {
+      font-size: 13px;
+      color: $white;
+    }
+    .button_collapse {
+      width: 32px;
+      height: 32px;
+      background: transparent;
+      border: none;
+
+      img {
+        width: 16px;
+        height: 9.14px;
+      }
+    }
+  }
+
+  &_text {
+    background-color: $collapse_background;
+    border-radius: 5px;
+    padding: 13px 20px 19px 20px;
+  }
 }
