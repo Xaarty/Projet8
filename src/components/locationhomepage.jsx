@@ -6,9 +6,9 @@ export default function Location() {
   var json = jsonData;
   console.log(json);
   return (
-    <div className="square-locs">
+    <div className="all_card">
       {json.map((location) => (
-        <div className="square" key={location.id}>
+        <div className="card" key={location.id}>
           <h2>{location.title}</h2>
         </div>
       ))}

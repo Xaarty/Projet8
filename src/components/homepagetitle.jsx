@@ -4,8 +4,8 @@ import imgtitle from "../assets/imgtitle.png";
 
 export default function Title() {
   return (
-    <div className="title-img">
-      <div>
+    <div className="banner_block">
+      <div className="banner">
         <img src={imgtitle} />
       </div>
       <h1>Chez vous, partout et ailleurs</h1>
