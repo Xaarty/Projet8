@@ -1,6 +1,12 @@
-.banner {
-  box-shadow: none;
-  #img_apropos {
-    opacity: 70%;
+.apropos-content {
+  margin: -8px 19.5px 19px 19.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  .banner {
+    box-shadow: none;
+    #img_apropos {
+      opacity: 70%;
+    }
   }
 }
