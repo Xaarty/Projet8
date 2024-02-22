@@ -10,8 +10,18 @@ export async function loader({ params }) {
 
 export default function FicheLogement() {
   const { logement } = useLoaderData();
+
   console.log(logement);
   return (
-    
-  )
+    <div>
+      <div>caroussel</div>
+      <div>
+        <div>
+          <h1>{logement.cover}</h1>
+          <p></p>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  );
 }
