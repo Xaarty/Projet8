@@ -1,5 +1,4 @@
 import "../styles/pages/home-page.scss";
-import "../styles/main.scss";
 import imgtitle from "../assets/imgtitle.png";
 
 export default function Title() {
