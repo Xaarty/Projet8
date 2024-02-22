@@ -7,7 +7,9 @@ import Home from "./pages/home";
 import Layout from "./pages/layout";
 import Error from "./pages/error-page";
 import Propos from "./pages/apropos";
-import FicheLogement from "./pages/fiche-logement";
+import FicheLogement, {
+  loader as fichelogementloader,
+} from "./pages/fiche-logement";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +18,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <Home />,
       },
       {
@@ -24,8 +26,9 @@ const router = createBrowserRouter([
         element: <Propos />,
       },
       {
-        path: "/fiche-logement",
+        path: "/:id",
         element: <FicheLogement />,
+        loader: fichelogementloader,
       },
     ],
   },
