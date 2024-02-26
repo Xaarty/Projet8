@@ -1,0 +1,100 @@
+@import "../utilis/variable.scss";
+
+.main_box {
+  margin: 0 20px 27px 20px;
+}
+.star-filled svg path {
+  fill: $main-color;
+}
+
+.caroussel {
+  width: 335px;
+  height: 255px;
+  margin-bottom: 15px;
+}
+
+.main_info_1 {
+  .title {
+    h1 {
+      color: $main-color;
+      font-size: 18px;
+      font-weight: $font_weight_medium;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 14px;
+      font-weight: $font_weight_medium;
+      margin-bottom: 10px;
+    }
+  }
+  .all_tag_box {
+    display: flex;
+    gap: 10px;
+
+    .tag_box {
+      display: flex;
+      background-color: $main-color;
+
+      height: 18px;
+      border-radius: 10px;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      margin-bottom: 16px;
+      p {
+        margin: 0 5px;
+        font-size: 10px;
+        font-weight: $font_weight_bold;
+      }
+    }
+  }
+}
+
+.main_info_2 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-bottom: 13px;
+
+  .identity {
+    display: flex;
+    align-items: center;
+    gap: 10.5px;
+
+    p {
+      font-size: 12px;
+      font-weight: 500;
+      color: $main-color;
+    }
+
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+  .rating {
+    display: flex;
+    justify-content: center;
+
+    .rating_stars {
+      display: flex;
+      gap: 4.59px;
+      .star-filled,
+      .star-empty {
+        display: flex;
+        align-items: center;
+        svg {
+          width: 13.41px;
+          height: 13px;
+        }
+      }
+    }
+  }
+}
+
+.collapses {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

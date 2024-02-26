@@ -4,6 +4,12 @@ import vectorup from "../assets/vectorup.png";
 import { useState } from "react";
 export default function Collapse(props) {
   const [openstate, isOpen] = useState(false);
+  let textContent = null;
+  if (Array.isArray(props.text)) {
+    textContent = props.text.map((item, index) => <p key={index}>{item}</p>);
+  } else {
+    textContent = <p>{props.text}</p>;
+  }
   return (
     <div className="collapse_box">
       <div className="collapse_box_bar">
@@ -17,7 +23,7 @@ export default function Collapse(props) {
         </button>
       </div>
       <div className={`collapse_box_text ${openstate ? "is_open" : ""}`}>
-        <p>{props.text}</p>
+        {textContent}
       </div>
     </div>
   );
