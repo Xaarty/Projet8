@@ -3,6 +3,7 @@ import jsonData from "../locations.json";
 import Tagbox from "../components/tags";
 import StarRating from "../components/stars";
 import Collapse from "../components/collapse";
+import Caroussel from "../components/caroussel";
 export async function loader({ params }) {
   console.log(params);
   const logements = jsonData;
@@ -18,7 +19,7 @@ export default function FicheLogement(props) {
   const logUnique = logement[0];
   return (
     <div className="main_box">
-      <div className="caroussel">caroussel</div>
+      <Caroussel pictures={logUnique.pictures} alt={logUnique.location} />
 
       <div className="main_info">
         <div className="main_info_1">
