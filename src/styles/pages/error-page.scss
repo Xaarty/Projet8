@@ -1,4 +1,5 @@
 @import "../utilis/variable.scss";
+@import "../utilis/mixin.scss";
 #main_error {
   margin: 113px 0px;
   display: flex;
@@ -6,20 +7,57 @@
   gap: 113px;
   align-items: center;
   text-align: center;
+
+  @include tablet {
+    margin: 126px 0;
+    gap: 126px;
+  }
+
+  @include desktop {
+    margin: 139px 0;
+    gap: 139px;
+  }
+
   h1 {
     font-size: 96px;
     color: $main-color;
+
+    @include tablet {
+      font-size: 150px;
+    }
+
+    @include desktop {
+      font-size: 288px;
+    }
   }
+
   h2 {
     font-weight: $font_weight_medium;
     font-size: 18px;
     color: $main-color;
     width: 260px;
+
+    @include tablet {
+      font-size: 27px;
+      width: 100%;
+    }
+
+    @include desktop {
+      font-size: 36px;
+    }
   }
 
   a {
     text-decoration: underline;
     font-size: 14px;
     font-weight: $font_weight_medium;
+
+    @include desktop {
+      font-size: 16px;
+    }
+
+    @include desktop {
+      font-size: 18px;
+    }
   }
 }

@@ -14,9 +14,11 @@ export default function Apropos() {
         .map((_, i) => (
           <Collapse key={i} />
         ))} */}
-      {json.map((propos) => (
-        <Collapse title={propos.title} text={propos.text} key={propos.id} />
-      ))}
+      <div className="collapse_propos">
+        {json.map((propos) => (
+          <Collapse title={propos.title} text={propos.text} key={propos.id} />
+        ))}
+      </div>
     </div>
   );
 }

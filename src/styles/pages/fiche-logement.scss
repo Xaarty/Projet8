@@ -1,7 +1,15 @@
 @import "../utilis/variable.scss";
-
+@import "../utilis/mixin.scss";
 .main_box {
   margin: 0 20px 27px 20px;
+
+  @include tablet {
+    margin: 0 60px 27px 60px;
+  }
+
+  @include desktop {
+    margin: 0 100px 38.5px 100px;
+  }
 }
 .star-filled svg path {
   fill: $main-color;
@@ -16,6 +24,16 @@
   align-items: center;
   justify-content: center;
   position: relative;
+
+  @include tablet {
+    height: 335px;
+    margin-bottom: 22.5px;
+  }
+
+  @include desktop {
+    height: 415px;
+    margin-bottom: 30px;
+  }
 
   .img_caroussel {
     position: absolute;
@@ -35,9 +53,26 @@
     background: transparent;
     height: 24px;
 
+    @include tablet {
+      height: 71.82px;
+    }
+
+    @include desktop {
+      height: 119.64px;
+    }
     img {
       width: 24px;
       height: 24px;
+
+      @include tablet {
+        width: 60px;
+        height: 71.82px;
+      }
+
+      @include desktop {
+        width: 96px;
+        height: 119.64px;
+      }
     }
   }
 
@@ -59,91 +94,185 @@
       width: 8px;
       height: 8px;
       background-color: #ffffff00;
-      border: 2px solid #fff;
+      border: 2px solid $white;
       border-radius: 100%;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
       padding: 0;
+
+      @include tablet {
+        width: 12px;
+        height: 12px;
+        border: 2.7px solid $white;
+      }
     }
 
     .dot_selected {
-      background-color: #fff;
+      background-color: $white;
     }
   }
 }
-.main_info_1 {
-  .title {
-    h1 {
-      color: $main-color;
-      font-size: 18px;
-      font-weight: $font_weight_medium;
-      margin-bottom: 5px;
-    }
-    p {
-      font-size: 14px;
-      font-weight: $font_weight_medium;
-      margin-bottom: 10px;
-    }
+
+.main_info {
+  display: grid;
+
+  @include tablet {
+    grid-template-columns: auto auto;
   }
-  .all_tag_box {
-    display: flex;
-    gap: 10px;
+  .main_info_1 {
+    .title {
+      h1 {
+        color: $main-color;
+        font-size: 18px;
+        font-weight: $font_weight_medium;
+        margin-bottom: 5px;
 
-    .tag_box {
-      display: flex;
-      background-color: $main-color;
+        @include tablet {
+          margin-bottom: 0;
+          font-size: 27px;
+        }
 
-      height: 18px;
-      border-radius: 10px;
-      justify-content: center;
-      align-items: center;
-      color: $white;
-      margin-bottom: 16px;
+        @include desktop {
+          font-size: 36px;
+        }
+      }
       p {
-        margin: 0 5px;
-        font-size: 10px;
-        font-weight: $font_weight_bold;
+        font-size: 14px;
+        font-weight: $font_weight_medium;
+        margin-bottom: 10px;
+
+        @include tablet {
+          font-size: 16px;
+          margin-bottom: 15px;
+        }
+
+        @include desktop {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .all_tag_box {
+      display: flex;
+      gap: 10px;
+
+      .tag_box {
+        display: flex;
+        background-color: $main-color;
+
+        height: 18px;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        margin-bottom: 16px;
+
+        @include tablet {
+          height: 21.5px;
+          margin-bottom: 20px;
+        }
+
+        @include desktop {
+          height: 25px;
+          margin-bottom: 24px;
+        }
+        p {
+          margin: 0 5px;
+          font-size: 10px;
+          font-weight: $font_weight_bold;
+
+          @include tablet {
+            font-size: 12px;
+            margin: 0 7.5px;
+          }
+
+          @include desktop {
+            font-size: 14px;
+            margin: 0 10px;
+          }
+        }
       }
     }
   }
-}
 
-.main_info_2 {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  margin-bottom: 13px;
-
-  .identity {
+  .main_info_2 {
     display: flex;
-    align-items: center;
-    gap: 10.5px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 13px;
 
-    p {
-      font-size: 12px;
-      font-weight: 500;
-      color: $main-color;
+    @include tablet {
+      flex-direction: column;
+      align-items: end;
     }
 
-    img {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-    }
-  }
-  .rating {
-    display: flex;
-    justify-content: center;
-
-    .rating_stars {
+    .identity {
       display: flex;
-      gap: 4.59px;
-      .star-filled,
-      .star-empty {
+      align-items: center;
+      gap: 10.5px;
+
+      p {
+        font-size: 12px;
+        font-weight: $font_weight_medium;
+        color: $main-color;
+
+        @include tablet {
+          font-size: 15px;
+        }
+
+        @include desktop {
+          font-size: 18px;
+        }
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+
+        @include tablet {
+          width: 48px;
+          height: 48px;
+        }
+
+        @include desktop {
+          width: 64px;
+          height: 64px;
+        }
+      }
+    }
+    .rating {
+      display: flex;
+      justify-content: center;
+
+      .rating_stars {
         display: flex;
-        align-items: center;
-        svg {
-          width: 13.41px;
-          height: 13px;
+        gap: 4.59px;
+
+        @include tablet {
+          gap: 6.92px;
+        }
+
+        @include desktop {
+          gap: 9.25px;
+        }
+        .star-filled,
+        .star-empty {
+          display: flex;
+          align-items: center;
+          svg {
+            width: 13.41px;
+            height: 13px;
+
+            @include tablet {
+              width: 19.08px;
+              height: 18.5px;
+            }
+
+            @include desktop {
+              width: 24.75px;
+              height: 24px;
+            }
+          }
         }
       }
     }
@@ -154,4 +283,35 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 58px;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    gap: 76px;
+  }
+
+  .collapse_box {
+    &_bar {
+      @include tablet {
+        border-radius: 7.5px;
+      }
+
+      @include desktop {
+        border-radius: 10px;
+      }
+      h2 {
+        @include tablet {
+          font-size: 15.5px;
+        }
+
+        @include desktop {
+          font-size: 18px;
+        }
+      }
+    }
+  }
 }
