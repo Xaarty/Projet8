@@ -1,5 +1,4 @@
 import "../styles/layout/collapse.scss";
-import vectordown from "../assets/vectordown.png";
 import vectorup from "../assets/vectorup.png";
 import { useState } from "react";
 export default function Collapse(props) {
