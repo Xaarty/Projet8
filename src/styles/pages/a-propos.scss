@@ -1,12 +1,41 @@
+@import "../utilis/mixin.scss";
+
 .apropos-content {
   margin: -8px 19.5px 19px 19.5px;
   display: flex;
   flex-direction: column;
   gap: 19px;
-  .banner {
-    box-shadow: none;
-    #img_apropos {
-      opacity: 70%;
+  height: 80vh;
+
+  @include tablet {
+    margin: 1.5px 59.75px 28.5px 59.75px;
+    height: 72vh;
+  }
+
+  @include desktop {
+    margin: 11px 100px 38px 100px;
+    gap: 38px;
+  }
+  .banner_block {
+    .banner {
+      img {
+        opacity: 70%;
+      }
+    }
+  }
+  .collapse_propos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include tablet {
+      gap: 25px;
+      padding: 0 54.25px;
+    }
+
+    @include desktop {
+      gap: 30px;
+      padding: 0 108.5px;
     }
   }
 }

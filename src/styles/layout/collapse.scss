@@ -1,4 +1,5 @@
 @import "../utilis/variable.scss";
+@import "../utilis/mixin.scss";
 .collapse_box {
   width: 100%;
 
@@ -14,9 +15,27 @@
     border-radius: 5px;
     padding-left: 10px;
 
+    @include tablet {
+      height: 41px;
+      padding: 0 10px 0 12.5px;
+    }
+
+    @include desktop {
+      height: 52px;
+      padding: 0 20px 0 15px;
+    }
+
     h2 {
       font-size: 13px;
       color: $white;
+
+      @include tablet {
+        font-size: 18.5px;
+      }
+
+      @include desktop {
+        font-size: 24px;
+      }
     }
     .button_collapse {
       width: 32px;
@@ -28,6 +47,16 @@
         width: 16px;
         height: 9.14px;
         transition: all 0.4s ease-in;
+
+        @include tablet {
+          width: 20px;
+          height: 11.43px;
+        }
+
+        @include desktop {
+          width: 24px;
+          height: 13.71px;
+        }
         &.rotate {
           rotate: 180deg;
         }
@@ -40,8 +69,19 @@
     border-radius: 5px;
     padding: 13px 20px 19px 20px;
     display: none;
+
+    @include tablet {
+      padding: 16px 20px 20px 20px;
+    }
+
     &.is_open {
       display: block;
+    }
+
+    p {
+      @include tablet {
+        font-size: 18px;
+      }
     }
   }
 }

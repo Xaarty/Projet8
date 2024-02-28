@@ -4,8 +4,10 @@ import imgapropos from "../assets/imgapropos.png";
 
 export default function Bannerpropos() {
   return (
-    <div className="banner">
-      <img id="img_apropos" src={imgapropos} />
+    <div className="banner_block">
+      <div className="banner">
+        <img src={imgapropos} />
+      </div>
     </div>
   );
 }
