@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/home";
+import Home, { loader as homeloader } from "./pages/home";
 import Layout from "./pages/layout";
 import Error from "./pages/error-page";
 import Propos from "./pages/apropos";
@@ -19,6 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: homeloader,
       },
       {
         path: "/apropos",

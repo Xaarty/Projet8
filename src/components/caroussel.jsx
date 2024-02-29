@@ -1,7 +1,7 @@
 import arrowleft from "../assets/arrow_left.png";
 import arrowright from "../assets/arrow_right.png";
 import { useState } from "react";
-
+import Arrow from "./icone_arrowright";
 export default function Caroussel(props) {
   console.log(props);
   const [slide, setSlide] = useState(0);
@@ -28,10 +28,10 @@ export default function Caroussel(props) {
         />
       ))}
       <button className="arrow arrow_left" onClick={slideLeft}>
-        <img src={arrowleft} alt="arrow left carrousel" />
+        <Arrow />
       </button>
       <button className="arrow arrow_right" onClick={slideRight}>
-        <img src={arrowright} alt="arrow right carrousel" />
+        <Arrow />
       </button>
       <div className="dots">
         {props.pictures.map((_, index) => (
