@@ -9,11 +9,6 @@ export default function Apropos() {
   return (
     <div className="apropos-content">
       <Bannerpropos />
-      {/* {Array(4)
-        .fill(true)
-        .map((_, i) => (
-          <Collapse key={i} />
-        ))} */}
       <div className="collapse_propos">
         {json.map((propos) => (
           <Collapse title={propos.title} text={propos.text} key={propos.id} />

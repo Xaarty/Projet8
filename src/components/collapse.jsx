@@ -1,6 +1,7 @@
 import "../styles/layout/collapse.scss";
 import vectorup from "../assets/vectorup.png";
 import { useState, useRef, useEffect } from "react";
+
 export default function Collapse(props) {
   const [openstate, isOpen] = useState(false);
   const panel = useRef();

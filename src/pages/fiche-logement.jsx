@@ -4,6 +4,7 @@ import Tagbox from "../components/tags";
 import StarRating from "../components/stars";
 import Collapse from "../components/collapse";
 import Caroussel from "../components/caroussel";
+
 export async function loader({ params }) {
   console.log(params);
   const logements = jsonData;

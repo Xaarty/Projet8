@@ -3,9 +3,7 @@ import "../styles/pages/fiche-logement.scss";
 export default function StarRating({ rating }) {
   return (
     <div className="rating_stars">
-      {/* Utiliser une boucle pour générer les étoiles en fonction du rating */}
       {[...Array(5)].map((_, index) => (
-        // Utiliser une classe CSS différente pour les étoiles remplies et vides
         <span
           key={index}
           className={index < rating ? "star-filled" : "star-empty"}

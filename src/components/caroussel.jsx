@@ -1,5 +1,3 @@
-import arrowleft from "../assets/arrow_left.png";
-import arrowright from "../assets/arrow_right.png";
 import { useState } from "react";
 import Arrow from "./icone_arrowright";
 export default function Caroussel(props) {

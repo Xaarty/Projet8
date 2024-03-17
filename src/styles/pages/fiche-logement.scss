@@ -2,13 +2,15 @@
 @import "../utilis/mixin.scss";
 .main_box {
   margin: 0 20px 27px 20px;
-
+  min-height: 71vh;
   @include tablet {
     margin: 0 60px 27px 60px;
+    min-height: 69vh;
   }
 
   @include desktop {
     margin: 0 100px 38.5px 100px;
+    min-height: 64vh;
   }
 }
 .star-filled svg path {
