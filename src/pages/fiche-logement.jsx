@@ -4,6 +4,7 @@ import Tagbox from "../components/tags";
 import StarRating from "../components/stars";
 import Collapse from "../components/collapse";
 import Caroussel from "../components/caroussel";
+import Error from "./error-page";
 
 export async function loader({ params }) {
   console.log(params);
@@ -14,10 +15,14 @@ export async function loader({ params }) {
 
 export default function FicheLogement(props) {
   const { logement } = useLoaderData();
-  const logs = { logement }.title;
-  console.log(logs);
-  console.log(logement);
+
+  if (!logement || !logement.length) {
+    // Handle the case where data is still loading
+    return <Error/>;
+  }
+
   const logUnique = logement[0];
+
   return (
     <div className="main_box">
       <Caroussel pictures={logUnique.pictures} alt={logUnique.location} />
@@ -38,7 +43,7 @@ export default function FicheLogement(props) {
         <div className="main_info_2">
           <div className="identity">
             <p>{logUnique.host.name}</p>
-            <img src={logUnique.host.picture} />
+            <img src={logUnique.host.picture} alt={logUnique.host.name} />
           </div>
           <div className="rating">
             <StarRating rating={logUnique.rating} />

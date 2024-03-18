@@ -13,7 +13,7 @@ export default function Header() {
             isPending ? "pending" : isActive ? "active" : ""
           }
         >
-          Acceuil
+          Accueil
         </NavLink>
         <NavLink
           to="/apropos"

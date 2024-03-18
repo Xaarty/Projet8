@@ -25,21 +25,26 @@ export default function Caroussel(props) {
           }
         />
       ))}
-      <button className="arrow arrow_left" onClick={slideLeft}>
-        <Arrow />
-      </button>
-      <button className="arrow arrow_right" onClick={slideRight}>
-        <Arrow />
-      </button>
-      <div className="dots">
-        {props.pictures.map((_, index) => (
-          <button
-            key={index}
-            className={slide === index ? "dot dot_selected" : "dot"}
-            onClick={() => setSlide(index)}
-          ></button>
-        ))}
-      </div>
+
+      {props.pictures.length - 1 > 1 && (
+        <>
+          <button className="arrow arrow_left" onClick={slideLeft}>
+            <Arrow />
+          </button>
+          <button className="arrow arrow_right" onClick={slideRight}>
+            <Arrow />
+          </button>
+          <div className="dots">
+            {props.pictures.map((_, index) => (
+              <button
+                key={index}
+                className={slide === index ? "dot dot_selected" : "dot"}
+                onClick={() => setSlide(index)}
+              ></button>
+            ))}
+          </div>
+        </>
+      )}  
     </div>
   );
 }
